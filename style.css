@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #ddd6f3 , #faaca8  );
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 85%;
+  margin: auto;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header h1{
+  color: #080f55;
+  font-size: clamp(1.5rem, calc(10vw + 1rem), 3rem);
+
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+}
+
+form button {
+  color: #004e92;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #004e92;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+  /* min-width: 30%; */
+  width: 25em;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-button,
+.checked-button {
+  background: #f70202;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.checked-button {
+  background: #25d625;
+}
+
+.todo-item {
+  padding: 0 0.5rem;
+}
+
+/* previously if we clicked on bin icon in button it dont get clicked so we change it here
+Now if we click anywhere button gets clicked */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall{
+    /* transform: translateY(8rem) rotateZ(20deg); */
+    opacity: 0;
+}
